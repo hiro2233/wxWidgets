@@ -412,7 +412,6 @@ bool wxAppConsole::CheckBuildOptions(const char *optionsSignature,
 #if 0 // can't use wxLogTrace, not up and running yet
     printf("checking build options object '%s' (ptr %p) in '%s'\n",
              optionsSignature, optionsSignature, componentName);
-#endif
 
     if ( strcmp(optionsSignature, WX_BUILD_OPTIONS_SIGNATURE) != 0 )
     {
@@ -429,6 +428,7 @@ bool wxAppConsole::CheckBuildOptions(const char *optionsSignature,
         // normally wxLogFatalError doesn't return
         return false;
     }
+#endif
 #undef wxCMP
 
     return true;
